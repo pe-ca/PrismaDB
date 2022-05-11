@@ -1,0 +1,19 @@
+{
+  "name": "prismadb",
+  "version": "1.0.0",
+  "description": "Practica 3 Semana 5 LaunchX",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pe-ca/PrismaDB.git"
+  },
+  "author": "RicardoPerales",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pe-ca/PrismaDB/issues"
+  },
+  "homepage": "https://github.com/pe-ca/PrismaDB#readme"
+}
