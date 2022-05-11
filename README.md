@@ -12,3 +12,18 @@ Practica 3 Semana 5 Launch X
 - Prisma (ORM)
 - Express
 - postgreSQL
+
+## Endpoints
+
+|Metodo|Endpoint|Request|Response|
+|:--|:--|:--|:--|
+|get|`/explorers`||lista de explorers con todos sus datos|
+|get|`/explorers_2`||lista de explorers con todos sus datos|
+|get|`/explorers/:id`|`:id` id de explorer|todos los datos de un explorer|
+|get|`/explorers_2/:id`|`:id` id de explorer|todos los datos de un explorer|
+|post|`/explorers`||crea un nuevo explorer|
+|post|`/explorers_2`||crea un nuevo explorer|
+|put|`/explorers/:id`|`:id` id de explorer|actualiza el campo mission del explorer|
+|put|`/explorers_2/:id`|`:id` id de explorer|actualiza el campo name del explorer|
+|delete|`/explorers/:id`|`:id` id de explorer|elimina un explorer|
+|delete|`/explorers_2/:id`|`:id` id de explorer|elimina un explorer|
