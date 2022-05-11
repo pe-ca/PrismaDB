@@ -96,3 +96,38 @@ const prisma = new PrismaClient();
     await prisma.$disconnect();
   }
 })();
+
+(async function main() {
+  try {
+    const mc1 = await prisma.MissionCommander.upsert({
+      where: { name: 'WoopaMC1' },
+      update: {},
+      create: {
+        name: 'WoopaMC1',
+        username: 'mc1',
+        mainStack: 'node',
+        currentEnrollments: true,
+        hasAzureCertification: true
+      },
+    });
+
+    const mc2 = await prisma.MissionCommander.upsert({
+      where: { name: 'WoopaMC2' },
+      update: {},
+      create: {
+        name: 'WoopaMC2',
+        username: 'mc2',
+        mainStack: 'java',
+        currentEnrollments: true,
+        hasAzureCertification: true
+      },
+    });
+
+    console.log('2 registros insertados correctamente');
+  } catch(e) {
+    console.error(e);
+    process.exit(1);
+  } finally {
+    await prisma.$disconnect();
+  }
+})();
