@@ -61,3 +61,38 @@ const prisma = new PrismaClient();
     await prisma.$disconnect();
   }
 })();
+
+(async function main() {
+  try {
+    const woopa = await prisma.Explorer_2.upsert({
+      where: { name: 'Woopa' },
+      update: {},
+      create: {
+        name: 'Woopa',
+        lang: 'javascript',
+        missionCommander: 'woopaMC',
+        enrollments: 1,
+        hasCertification: true
+      },
+    });
+
+    const woopa1 = await prisma.Explorer_2.upsert({
+      where: { name: 'Woopa1' },
+      update: {},
+      create: {
+        name: 'Woopa1',
+        lang: 'java',
+        missionCommander: 'woopaMC1',
+        enrollments: 1,
+        hasCertification: true
+      },
+    });
+
+    console.log('2 registros insertados correctamente');
+  } catch(e) {
+    console.error(e);
+    process.exit(1);
+  } finally {
+    await prisma.$disconnect();
+  }
+})();
